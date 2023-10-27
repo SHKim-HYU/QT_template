@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
     QApplication::setPalette(QApplication::style()->standardPalette());
 
     MainWindow w;
-    w.setWindowTitle("Robot Control Software | Simple Open EtherCAT Master (SOEM)");
+    w.setWindowTitle("Robot Control Software | CANopen CiA402");
     w.setWindowIcon(QIcon("app.ico"));
 
     // Second monitor의 좌표로 이동

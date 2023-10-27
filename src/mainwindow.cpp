@@ -212,8 +212,8 @@ MainWindow::MainWindow(QWidget *parent)
     paletteW.setBrush(QPalette::Active, QPalette::WindowText, brushW);
     paletteW.setBrush(QPalette::Inactive, QPalette::WindowText, brushW);
 
-    // START: EtherCAT Control/State/Slave Layout---------------------
-    // TAB: EtherCAT Master COntrol Button and Layout
+    // START: CANopen Control/State/Slave Layout---------------------
+    // TAB: CANopen Master Control Button and Layout
     QButtonSlide *btnRtnet = new QButtonSlide("RTnet", this->font(), false);
     connect(btnRtnet, SIGNAL(clicked()), SLOT(OnClickedButtonRTnet()));
     QPushButton *btnGetAdapter = new QPushButton("Get NIC");
@@ -259,12 +259,12 @@ MainWindow::MainWindow(QWidget *parent)
     wg_EcatControl->setFont(fontText);
 
     QTabWidget *tab_EcatControl = new QTabWidget();
-    tab_EcatControl->addTab(wg_EcatControl, QIcon("app.ico"), QString("EtherCAT Master Control"));
+    tab_EcatControl->addTab(wg_EcatControl, QIcon("app.ico"), QString("CANopen Master Control"));
     tab_EcatControl->setFont(fontTabTitle);
     tab_EcatControl->setPalette(palette);    
     //-------------------------------------------------------------
 
-    // TAB: EtherCAT Master State
+    // TAB: CANopen State
     ecatStateBtn.ledEcatState = LedLayout("Current State:", "INIT", LED_GREEN);
     ecatStateBtn.btnStInit = new QPushButton("INIT");
     connect(ecatStateBtn.btnStInit, SIGNAL(clicked()), SLOT(OnClickedButtonEcatStToInit()));
@@ -290,12 +290,12 @@ MainWindow::MainWindow(QWidget *parent)
     wg_EcatSt->setFont(fontText);
 
     QTabWidget *tab_EcatState = new QTabWidget();
-    tab_EcatState->addTab(wg_EcatSt, QIcon("app.ico"), QString("EtherCAT State"));
+    tab_EcatState->addTab(wg_EcatSt, QIcon("app.ico"), QString("CANopen State"));
     tab_EcatState->setFont(fontTabTitle);
     tab_EcatState->setPalette(palette);
     //-------------------------------------------------------------
 
-    // TAB: EtherCAT Slave Lists
+    // TAB: CANopen Slave Lists
     // tree_SlaveList: member variable
     tree_SlaveList = new QTreeWidget(this);
     tree_SlaveList->setColumnCount(3);
@@ -317,7 +317,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QWidget *gl_EcatWidget = new QWidget();
     gl_EcatWidget->setLayout(gl_Ecat);
-    // END: EtherCAT Control/State/Slave Layout---------------------
+    // END: CANopen Control/State/Slave Layout---------------------
 
    
     // START: Manipulator Servo/Joint/Task Control Tab. Layout -----
