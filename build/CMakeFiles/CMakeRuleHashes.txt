@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+4602e354ece93c55bfee4e51c9ecc8b5 CMakeFiles/Qt_template_autogen
+4012896e360eb2b6e83c5bc4979da254 include/DarkStyleWindow/CMakeFiles/DarkStyleWindow_autogen
+555ef76c46339acffcd4d6ccb76dc773 include/DarkStyleWindow/framelesswindow/CMakeFiles/framelesswindow_autogen
+58422f863e544595ba16e3de8b823162 include/QtWidgets/CMakeFiles/QtWidgets_autogen
