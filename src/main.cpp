@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 
     QFont font = a.font();
     font.setStyleHint(QFont::Fantasy);
-    //font.setFamily("Verdana");
+    // font.setFamily("Verdana");
     font.setFamily("Arial");
 
     QScreen* screen = QGuiApplication::primaryScreen();

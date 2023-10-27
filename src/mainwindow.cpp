@@ -142,8 +142,8 @@ static uint8_t  currentgroup = 0;
 
 // CEcatSoem _ecatSoem;
 
-//#define DEF_WINDOW_FONT    "Arial"
-#define DEF_WINDOW_FONT    "Verdana"
+#define DEF_WINDOW_FONT    "Arial"
+// #define DEF_WINDOW_FONT    "Verdana"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -615,7 +615,8 @@ Servo_t MainWindow::CreateJointServoLayout(bool header)
 
     QFont fontLabel = this->font();
     fontLabel.setStyleHint(QFont::Fantasy);
-    fontLabel.setFamily("Verdana");
+    // fontLabel.setFamily("Verdana");
+    fontLabel.setFamily("Arial");
     if (header)
     {
         fontLabel.setPointSize(8);
@@ -726,7 +727,8 @@ Led_t MainWindow::LedLayout(QString strLedName, QString strLedLabel, led_color c
 
     QFont fontLabel = this->font();
     fontLabel.setStyleHint(QFont::Fantasy);
-    fontLabel.setFamily("Verdana");
+    // fontLabel.setFamily("Verdana");
+    fontLabel.setFamily("Arial");
 
     QHBoxLayout *HBoxLayout = new QHBoxLayout(this);
     QButtonLedIndicator *btnLed = new QButtonLedIndicator(this);
@@ -781,8 +783,8 @@ LedButton_t MainWindow::LedButtonLayout(QString strBtnName, QString strLedName, 
 {
     QFont fontLabel = this->font();
     fontLabel.setStyleHint(QFont::Fantasy);
-    fontLabel.setFamily("Verdana");
-    // fontLabel.setFamily("Arial");
+    // fontLabel.setFamily("Verdana");
+    fontLabel.setFamily("Arial");
     // fontLabel.setPointSize(7);
     // fontLabel.setWeight(QFont::Bold);
     QRect screenres = QApplication::desktop()->screenGeometry(1 /*screenNumber*/);
